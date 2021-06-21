@@ -1,46 +1,17 @@
 import React from 'react'
+import StepRow from './StepRow'
 import ProductItem from './ProductItem'
 import Summary from './Summary'
 
 function OrderList(props) {
-    const { products, counts, setCounts, total, productCount } = props
+    const { scStep, products, counts, setCounts, total, productCount } = props
 
     return (
         <>
         <div className="container-fluid">
-        {/* <!-- 購物車流程 --> */}
-        <div className="col-10 px-0 d-flex mx-auto justify-content-center">
-          <div className="step">
-            <div className="d-flex align-items-center">
-              <i className="stepCircle stepActive"></i>
-              <i className="stepLine"></i>
-              <i className="stepArrow right"></i>
-            </div>
-            <div className="stepFont">確認購物車</div>
-          </div>
-          <div className="step">
-            <div className="d-flex align-items-center">
-              <i className="stepCircle "></i>
-              <i className="stepLine"></i>
-              <i className="stepArrow right"></i>
-            </div>
-            <div className="stepFont">物流選擇 </div>
-          </div>
-          <div className="step">
-            <div className="d-flex align-items-center">
-              <i className="stepCircle "></i>
-              <i className="stepLine"></i>
-              <i className="stepArrow right"></i>
-            </div>
-            <div className="stepFont">填寫資料</div>
-          </div>
-          <div className="step">
-            <div className="d-flex align-items-center">
-              <i className="stepCircle "></i>
-            </div>
-            <div className="stepFont">完成訂購</div>
-          </div>
-        </div>
+        <StepRow 
+          scStep={scStep}
+        />
 
         {/* <!---------------- 確認購物車 ----------------> */}
         {/* <!-- label --> */}
@@ -85,13 +56,11 @@ function OrderList(props) {
           }}
         />
       ))}
-          
-
+        </div>
           <Summary 
               total={total()}
               productCount={productCount()}
           />
-        </div>
 
         {/* <!-- 按鈕列 --> */}
         <div className="col-10 mx-auto">

@@ -27,7 +27,7 @@ function ProductItem(props) {
           >
             -
           </div>
-          <div className="bd1 p-2">1</div>
+          <div className="bd1 p-2">{count}</div>
           <div
             className="bd1 p-2 scBtn scBtnAdd"
             onClick={() => setCount(count + 1)}

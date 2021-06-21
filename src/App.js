@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import './style.css'
-import './App.css'
+import './shoppingCart.css'
 import OrderList from './components/OrderList'
 
+const scStep = [
+  '確認購物車', '物流選擇', '填寫資料', '完成訂購'
+]
 
 const products = [
   {
@@ -56,6 +59,7 @@ function App() {
   return (
     <>
       <OrderList
+          scStep={scStep}
           products={products}
           counts={counts}
           setCounts={setCounts}
