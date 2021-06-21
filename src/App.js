@@ -10,22 +10,22 @@ const scStep = [
 const products = [
   {
     name: '日用薄型衛生棉 15片',
-    catgory: '弦月柔棉',
+    category: '弦月柔棉',
     price: 600,
   },
   {
     name: '日用薄型衛生棉 20片',
-    catgory: '弦月柔棉',
+    category: '弦月柔棉',
     price: 800,
   },
   {
     name: '日用薄型衛生棉 5片',
-    catgory: '弦月柔棉',
+    category: '弦月柔棉',
     price: 100,
   },
   {
     name: '棉條 20個',
-    catgory: '弦月柔棉',
+    category: '弦月柔棉',
     price: 1200,
   },
 ]
